@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap的css文件 -->
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- bootstrap通过table类来设置基础表格的样式 -->
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>联系方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-info">
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr class="table-warning">
+                    <td>2</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr class="table-danger">
+                    <td>3</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr class="table-success">
+                    <td>4</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 表格颜色
+            通过指定意义的颜色类名可以为表格的行或者单元格设置颜色.表格颜色类说明
+            类名             描述
+            table-primary 蓝色：指定这是一个重要的操作
+            table-success 绿色：指定这是一个允许执行的操作
+            table-danger  红色：指定这是一个危险的操作
+            table-info    浅蓝色：表示内容已变更
+            table-warning 橘色：表示需要注意的操作
+            table-active  灰色：用于鼠标悬停效果
+            table-secondary 灰色：表示内容不怎么重要
+            table-light   浅灰色：可以是表格行的背景
+            table-dark    深灰色：可以是表格行的背景
+        -->
+        <!-- 创建带条纹行的表格
+            通过添加table-striped类，可在<tbody>内的行看到条纹，
+            即在基础表格的代码上为标签<table>添加table-striped类
+        -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>联系方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 带边框的表格
+            通过将类table-bordered添加到table类创建的表格上，就可以在单元格的所有边上添加边框
+            无边框表格
+            通过添加table-borderless类可以取消表格和单元格所有的边框
+        -->
+        <span>带边框和不带边框的表格</span>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>联系方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>联系方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 鼠标悬停状态表格
+            table-hover类可以为表格的每一行添加鼠标悬停效果（灰色背景）
+        -->
+        <span>鼠标悬停状态表格</span>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>联系方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 创建较小的表格
+            table-sm类用于通过减少内边距来设置较小的表格，使表格更加紧凑并节省空间
+        -->
+        <span>较小的表格</span>
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>联系方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>张三</td>
+                    <td>22</td>
+                    <td>12345656</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 响应式表格
+            要使任何表格具有响应性，只需要将table元素包裹在table-responsive元素内，即可创建响应式表格。
+            还可以使用类table-responsive{-sm|-md|-lg|-xl}根据视口宽度指定表格何时应具有滚动条
+            注意：table-responsive类是在div外包裹的一个div实现
+        -->
+        <span>响应式表格</span>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                        <th>联系方式</th>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                        <th>联系方式</th>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                        <th>联系方式</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>22</td>
+                        <td>12345656</td>
+                        <td>2</td>
+                        <td>张三</td>
+                        <td>22</td>
+                        <td>12345656</td>
+                        <td>2</td>
+                        <td>张三</td>
+                        <td>22</td>
+                        <td>12345656</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- bootstrap的js文件 -->
+    <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

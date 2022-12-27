@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- bootstrap的css文件 -->
+        <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- bootstrap列表组
+        无序列表-顺序无关紧要的项目列表。无序列表中的列表想标有项目符号，例如·等，ul>li
+        有序列表-顺序很重要的项目列表。有序列表中的列表项用数字标记，例如1、vi等ol>li
+        定义列表-术语列表及其相关描述。dl>dt
+    -->
+    <ul>
+        <li>标题一</li>
+        <li>标题二</li>
+        <li>标题三</li>
+    </ul>
+
+    <ol>
+        <li>苹果</li>
+        <li>香蕉</li>
+        <li>橘子</li>
+    </ol>
+
+    <!-- 定义列表 -->
+    <dl class="row">
+        <dt class="col-sm-3 bg-primary">bg-primary</dt>
+        <dt class="col-sm-9">重要的背景颜色</dt>
+        <dt class="col-sm-3 bg-success">bg-success</dt>
+        <dt class="col-sm-9">执行成功的背景颜色</dt>
+        <dt class="col-sm-3 bg-info">bg-info</dt>
+        <dt class="col-sm-9">信息提示的背景颜色</dt>
+    </dl>
+
+    <!-- 需要从列表项中删除默认样式，可以通过简单地将类list-unstyled应用到相应的<ul>或者<ol>元素来做到这一点 -->
+    <ul class="list-unstyled">
+        <li>标题一</li>
+        <li>标题二</li>
+        <li>标题三</li>
+    </ul>
+    <!--内联列表
+        如果要使用有序列表或无序列表创建水平菜单，则需要将所有列表项放在一行中（即并排）。
+        可以通过将类list-inline添加到<ul>或<ol>并将类list-inline-item添加到子<li>元素来完成此操作
+        添加list-inline属性变为内联列表，简单点说就是把垂直方向的列表变为水平方向。内联类别一般用于
+        做菜单（导航）样式
+    -->
+    <ul class="list-inline">
+        <li class="list-inline-item">标题一</li>
+        <li class="list-inline-item">标题二</li>
+        <li class="list-inline-item">标题三</li>
+    </ul>
+    <!-- bootstrap列表组
+        列表组是非常有用且灵活的组件，用于以漂亮的方式显示元素列表，在最基本的形式中，列表组只是一个带有list-group类的无序列表，
+        且列表中的元素带有list-group-item类
+    -->
+    <span>基本列表组</span>
+    <ul class="list-group">
+        <li class="list-group-item">第一项</li>
+        <li class="list-group-item">第二项</li>
+        <li class="list-group-item">第三项</li>
+    </ul>
+    <!-- 设置禁用和活动项
+        可以将类active添加到list-group-item类的后面用来指示当前项目元素是活动的。同样，可以将
+        disabled添加到list-group-item后面，从而使其看起来是禁用状态
+    -->
+    <span>设置禁用和活动项</span>
+    <ul class="list-group">
+        <li class="list-group-item active">第一项 活跃项</li>
+        <li class="list-group-item">第二项</li>
+        <li class="list-group-item disabled">第三项 禁用</li>
+    </ul>
+    <!-- 链接项的列表组
+        要创建一个链接的列表项，可以将<li>替换为<a>。如果想鼠标悬停显示灰色背景
+        可以添加list-group-item-action类
+    -->
+    <span>链接项的列表组</span>
+    <ul class="list-group">
+        <a href="#" class="list-group-item list-group-active">第一项</a>
+        <a href="#" class="list-group-item">第二项</a>
+        <a href="#" class="list-group-item">第三项</a>
+    </ul>
+    <!-- 移除列表边框
+        使用list-group-flush类添加到list-group元素上，用以移除外边框和圆角，从而
+        创建与父容器边对边的的列表组
+    -->
+    <span>移除列表边框</span>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">第一项</li>
+        <li class="list-group-item">第二项</li>
+        <li class="list-group-item">第三项</li>
+    </ul>
+    <!--水平列表组
+        list-group-horizontal类添加到list-group，可以将列表项水平显示二不是垂直的显示（并排而不是堆叠）
+    -->
+    <span>水平列表组</span>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">第一项</li>
+        <li class="list-group-item">第二项</li>
+        <li class="list-group-item">第三项</li>
+    </ul>
+    <!-- 创建编号列表组
+        可以通过简单地在list-group元素上添加类list-group-numbered来创建带有元素编号的列表组
+    -->
+    <span>编号列表组</span>
+    <ol class="list-group list-group-numbered">
+        <li class="list-group-item">第一项</li>
+        <li class="list-group-item">第二项</li>
+        <li class="list-group-item">第三项</li>
+    </ol>
+    <!-- 带徽章的列表组
+        带徽章的列表组其实就是将bootstrap框架中的徽章组件和基础组件结合在一起的一个效果，
+        只需要在lst-group-item的基础上追加徽章组件“badge”
+    -->
+    <span>带徽章列表组</span>
+    <ul class="list-group">
+        <li class="list-group-item">第一项
+            <small class="badge bg-primary">hot</small>
+        </li>
+        <li class="list-group-item">第二项</li>
+        <li class="list-group-item">第三项</li>
+    </ul>
+    <!-- 多种颜色列表项
+        和大多数其他组件一样，可以在列表项目上使用相应的类来对它们进行额外的背景色设置，
+        来对它们施加额外的强调
+        list-group-item-success
+        list-group-item-secondary
+        list-group-item-info
+        list-group-item-warning
+        list-group-item-danger
+        list-group-item-primary
+        list-group-item-dark
+        list-group-item-light
+    -->
+    <span>多种颜色列表组</span>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">item-primary</li>
+        <li class="list-group-item list-group-item-secondary">item-secondary</li>
+        <li class="list-group-item list-group-item-info">item-info</li>
+        <li class="list-group-item list-group-item-warning">item-warning</li>
+        <li class="list-group-item list-group-item-danger">item-danger</li>
+        <li class="list-group-item list-group-item-primary">item-primary</li>
+        <li class="list-group-item list-group-item-dark">item-dark</li>
+        <li class="list-group-item list-group-item-light">item-light</li>
+    </ul>
+    <!-- 向列表组添加自定义的内容
+        bootstrap框架在链接列表的基础上增加了两个样式：
+        list-group-item-heading：用来定义列表项头部样式
+        list-group-item-text：用来定义列表项主要内容
+        这两个样式最大的作用就是用来帮助组开发者可以自定义列表项里的内容
+    -->
+    <span>自定义列表项</span>
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            <h3 class="list-group-item-heading">网站服务</h3>
+        </a>
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">标题一</h3>
+            <p class="list-group-item-text">内容一</p>
+        </a>
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">标题二</h3>
+            <p class="list-group-item-text">内容二</p>
+        </a>
+    </div>
+    <!-- bootstrap的js文件 -->
+    <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- bootstrap的css文件 -->
+        <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <span>网格</span>
+        <div class="row">
+            <!-- 等宽 -->
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">2</div>
+            <div class="col-md-1">3</div>
+            <div class="col-md-1">4</div>
+            <div class="col-md-1">5</div>
+            <div class="col-md-1">6</div>
+            <div class="col-md-1">7</div>
+            <div class="col-md-1">8</div>
+            <div class="col-md-1">9</div>
+            <div class="col-md-1">10</div>
+            <div class="col-md-1">11</div>
+            <div class="col-md-1">12</div>
+        </div>
+        <div class="row">
+            <!-- 大于 -->
+            <div class="col-lg-4">1</div>
+            <div class="col-lg-4">2</div>
+            <div class="col-lg-4">3</div>
+        </div>
+        <div class="row">
+            <!-- 不等宽 -->
+            <div class="col-sm-4" style="background-color: red;">1</div>
+            <div class="col-sm-8" style="background-color: blue;">2</div>
+        </div>
+
+        <!-- 网格嵌套列 -->
+        <span>网格嵌套列</span>
+        <div class="row">
+            <div class="col-md-9" style="background-color: red;">
+                <div class="row">
+                    <div class="col-md-6">1</div>
+                    <div class="col-md-6">2</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="background-color: pink;">3</div>
+                    <div class="col-md-9" style="background-color: skyblue;">4</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 网格偏移列 -->
+        <!-- 列偏移是通过类名（offset-*-*）来设置的。第一个星号（*）可以是sm、md、lg、xl,表示屏幕设备的类型，第二个星号可以是1到11的数字 -->
+        <span>网格偏移列</span>
+        <div class="row">
+            <div class="col-md-4" style="background-color: red;">1</div>
+            <div class="col-md-4 offset-md-4" style="background-color: blue;">2</div>
+        </div>
+
+        <!-- 居中 -->
+        <div class="row">
+            <div class="col-md-4 offset-md-3" style="background-color: green;">居中</div>
+        </div>
+
+        <!-- 网格列顺序
+             显示顺序为2 3 1
+        -->
+        <span>网格列顺序</span>
+        <div class="row">
+            <div class="col-md-4 order-3">1</div>
+            <div class="col-md-4 order-1">2</div>
+            <div class="col-md-4 order-2">3</div>
+        </div>
+        <!-- 小例子 
+             源码顺序不变，将左右两列的位置互换
+        -->
+        <div class="row">
+            <div class="col-md-9 order-2">
+                <h5>这是最新的文章列表</h5>
+                <ul>
+                    <li>文章标题一 作者 日期</li>
+                    <li>文章标题二 作者 日期</li>
+                    <li>文章标题三 作者 日期</li>
+                </ul>
+            </div>
+            <div class="col-md-3 order-1">
+                <h5>导航栏</h5>
+                <ul>
+                    <li>首页</li>
+                    <li>视频直播</li>
+                    <li>视频回放</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 网格排序规则 
+             order-*中*的范围是1~5
+             其还支持order-first order-last,其他无论有没有编号，有order-first（last）都会设置为第（最后）一个。
+             优先级：first、last>order-数字>默认排序
+        -->
+        <span>网格排序规则</span>
+        <div class="row">
+            <div class="col-md-4 order-1">1</div>
+            <div class="col-md-4 order-first">order-first 2</div>
+            <div class="col-md-4 order-last">order-last 3</div>
+            <div class="col-md-4 order-1">order-1(4)</div>
+            <div class="col-md-4 order-2">order-2(5)</div>
+            <div class="col-md-4">6</div>
+            <div class="col-md-4">7</div>
+            <div class="col-md-4">8</div>
+        </div>
+
+        <!-- 排版标题 
+            bootstrap可以使用类h1-h6来设置标题
+        -->
+        <span>排版标题</span>
+
+        <h1>这是一个h1</h1>
+        <h2>这是一个h2</h2>
+        <h3>这是一个h3</h3>
+        <h4>这是一个h4</h4>
+        <h5>这是一个h5</h5>
+        <h6>这是一个h6</h6>
+
+        <p class="h1">这是class的h1</p>
+        <!--display标题类：当我们需要标题突出时可以使用这些标题类。突出标题以显示更大的字体显示，并且会对其进行加粗 -->
+        <h1 class="display-1">这是一个display 1</h1>
+
+        <!-- 还可以在段落上添加类lead来突出段落 -->
+        <p>这是一个段落</p>
+        <p class="lead">这是突出显示的段落</p>
+
+        <!-- 可以使用带有类text-mutedclass的<small>标签来显示更小且更浅的文本 
+             也可以添加类small指定更小文本（为父元素的85%）
+        -->
+        <small>这是一个文字</small>
+        <p class="small">这是一个段落</p>
+
+    </div>
+    <!-- bootstrap的js文件 -->
+    <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

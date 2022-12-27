@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- bootstrap的css文件 -->
+        <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!--文本对齐
+        text-start：文本左边对齐
+        text-center:文本居中对齐
+        text-end:文本右边对齐
+    -->
+    <span>文本对齐方式</span>
+    <p class="text-center">这是一个居中对齐的段落</p>
+    <p class="text-start">这是一个左对齐的段落</p>
+    <p class="text-end">这是一个右对齐的段落</p>
+    
+    <!--还可以使用响应式文本对齐类根据屏幕大小对齐文本  -->
+    <p class="text-sm-center">文本将在屏幕宽度等于或大于576px视口及以上居中对齐。</p>
+    <p class="text-md-center">文本将在屏幕宽度等于或大于768px视口及以上居中对齐。</p>
+    <p class="text-lg-center">文本将在屏幕宽度等于或大于992px视口及以上居中对齐。</p>
+    <p class="text-xl-center">文本将在屏幕宽度等于或大于1200px视口及以上居中对齐。</p>
+    <!-- 文本转换
+        text-lowercase:设定文本小写
+        text-uppercase:设定文本大写
+        text-capitalize:设定单词首字母大写
+    -->
+    <span>文本转换</span>
+    <p class="text-uppercase">abcdefg</p>
+    <p class="text-lowercase">ABCDEFG</p>
+    <p class="text-capitalize">abcdefg</p>
+    <!-- 截断长文本
+        对于较长的文本，可以使用类text-truncate用省略号截断文本。
+    -->
+    <span>截断长文本</span>
+    <div class="row">
+        <p class="col-sm-1 text-truncate">
+            这是一个很长很长很长很长的文本
+        </p>
+    </div>
+    <!-- 文本换行和溢出
+        通过类名（.text-wrap）可以设置文字在超过盒子宽度时自动换行
+        通过类名（.text-nowrap）可以阻止文字的换行，此时文字会溢出盒子
+    -->
+    <span>文本换行和溢出</span>
+    <div class="row">
+        <p class="col-sm-1 text-nowrap" style="background-color: red;">
+            这是一个很长很长很长很长的文本
+        </p>
+    </div>
+    <!-- 文本大小 
+        添加类名fs-*或添加类名h*(*为1-6的数值)
+        fs:font-size
+    -->
+    <span>文本大小</span>
+    <p class="fs-1">这是fs-1的段落</p>
+    <p class="fs-2">这是fs-2的段落</p>
+    <!-- 字体粗细及斜体
+        字体的粗细分为了5类：fw-bold、fw-bolder、fw-normal、fw-light、fw-lighter
+        fw:font-weight
+        斜体通过类名fst-italic来控制、fst-normal可以取消斜体
+        fst:font-style
+    -->
+    <p class="fw-bold">粗体文字</p>
+    <p class="fw-bolder">粗体文本（相对于父元素）</p>
+    <p class="fw-normal">正常的文本</p>
+    <p class="fw-light">细体文本</p>
+    <p class="fw-lighter">细体文本(相对于父元素)</p>
+    <p class="fst-italic">斜体</p>
+    <p class="fst-normal">取消斜体</p>
+
+    <!-- 行高（行距） 
+        lh-1(1rem)、lh-sm(1.25rem)、lh-base(1.5rem)、lh-lg(2rem)
+        lh:line-height
+    -->
+    <span>行高</span>
+    <p class="lh-1">这是一个很长很长很长很长的段落</p>
+    <p class="lh-sm">这是一个很长很长很长很长的段落1.25</p>
+    <p class="lh-base">这是一个很长很长很长很长的段落1.5</p>
+    <p class="lh-lg">这是一个很长很长很长很长的段落2</p>
+    <!-- bootstrap的js文件 -->
+    <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

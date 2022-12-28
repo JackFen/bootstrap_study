@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap的css文件 -->
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- bootstrap的加载器
+        使用bootstrap读取图标以表示元件加载状态，这些读取图标完全使用html、css。
+        要创建spinner加载器，可以使用spinner-border类
+    -->
+    <div class="spinner-border"></div>
+
+    <div>
+        <div>不同颜色</div>
+        <!-- 可以使用文本颜色类设置不同的颜色 -->
+        <div class="spinner-border text-muted"></div>
+        <div class="spinner-border text-primary"></div>
+        <div class="spinner-border text-success"></div>
+        <div class="spinner-border text-info"></div>
+        <div class="spinner-border text-warning"></div>
+        <div class="spinner-border text-danger"></div>
+        <div class="spinner-border text-secondary"></div>
+        <div class="spinner-border text-dark"></div>
+        <div class="spinner-border text-light"></div>
+    </div>
+    
+    <div>
+        <div>闪烁的加载效果</div>
+        <!--闪烁的加载效果  -->
+        <div class="spinner-grow text-muted"></div>
+        <div class="spinner-grow text-primary"></div>
+        <div class="spinner-grow text-success"></div>
+        <div class="spinner-grow text-info"></div>
+        <div class="spinner-grow text-warning"></div>
+        <div class="spinner-grow text-danger"></div>
+        <div class="spinner-grow text-secondary"></div>
+        <div class="spinner-grow text-dark"></div>
+        <div class="spinner-grow text-light"></div>
+    </div>
+
+    <div>
+        <div>设置加载效果的大小</div>
+        <!-- 设置加载效果的大小 
+            使用spinner-border-sm或者spinner-grow-sm类来创建加载效果的大小
+        -->
+        <div class="spinner-border spinner-border-sm"></div>
+        <div class="spinner-grow spinner-grow-sm"></div>
+    </div>
+
+    <div>
+        <div>加载按钮</div>
+        <button class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm"></span>
+            加载中
+        </button>
+        <button class="btn btn-primary disabled">
+            <span class="spinner-border spinner-border-sm"></span>
+            禁用
+        </button>
+    </div>
+
+    <!-- bootstrap的js文件 -->
+    <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

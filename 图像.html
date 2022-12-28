@@ -12,15 +12,27 @@
     <!-- 圆角图片
     rounded类为图像添加圆角
     圆形
-    rounded-circle类可以设置椭圆形图片
+    rounded-circle类可以设置椭圆形图片,图片为正方形，则圆形为正圆，反之，则圆形为椭圆
     缩略图
     img-thumbnail类用于设置图片缩略图（图片有边框）
     对齐图像
     使用float-start类将图像向左浮动，或使用float-end向右浮动
     图片居中
     使用mx-auto(margin:auto)和d-block(:block)类来设置图片居中对齐：注意，是两个一起使用
+    响应式图片
+    图像有各种各样的尺寸，我们需要根据屏幕的大小自动适应，我们可以通过在<img>标签中添加img-fluid类
+    来设置响应式图片，此类主要将样式max-width:100%和height:auto;应用于图像，以便它能很好地缩放以适合包含元素
     -->
-
+    <div>圆角</div>
+    <img src="./cat.jpg" alt="" class="rounded">
+    <div>圆形</div>
+    <img src="./cat.jpg" alt="" class="rounded-circle">
+    <div>缩略图</div>
+    <img src="./cat.jpg" alt="" class="img-thumbnail">
+    <div>图片居中</div>
+    <img src="./cat.jpg" alt="" class="mx-auto d-block">
+    <div>响应式图片</div>
+    <img src="./cat.jpg" alt="" class="img-fluid">
     <!-- bootstrap的js文件 -->
     <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
 </body>

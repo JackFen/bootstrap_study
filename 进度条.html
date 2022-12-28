@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap的css文件 -->
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- bootstrap进度条
+        进度条可以用于向用户显示任务或操作的进度。进度条（progress bar）支持堆叠、动画背景和文本标签
+        工作原理：
+        我们使用progress作为最外层的元素，用于只是进度条（progress bar）的最大值
+        我们在内部使用progress-bar来只是到目前为止的进度
+        progress-bar需要通过内联样式、工具类后自定义css属性来设置其宽度
+        下面是一个垂直渐变的简单进度条
+    -->
+    <div>
+        <br>
+        <div class="progress">
+            <div class="progress-bar" style="width: 10%;"></div>
+        </div>
+    </div>
+
+    <div>
+        <!-- 进度条的高度
+            进度条的高度默认为1rem(通常为16px)，但我们也可以根据需要通过在progress
+            元素上设置css height属性来设置其高度
+
+            注意，必须为进度容器和进度条设置相同的高度
+        -->
+        <!-- 2px高度进度条 -->
+        <br>
+        <div class="progress" style="height: 2px;">
+            <div class="progress-bar" style="width: 40%;"></div>
+        </div>
+        <br>
+        <!-- 20px高度进度条 -->
+        <div class="progress" style="height: 20px;">
+            <div class="progress-bar" style="width: 60%;"></div>
+        </div>
+    </div>
+
+    <div>
+        <!-- 进度条标签
+            通过在progress-bar元素里面添加文本，就可以为进度条（progress bar）添加标签，以显示可见的百分比
+        -->
+        <br>
+        <div class="progress">
+            <div class="progress-bar" style="width: 30%;">30%</div>
+        </div>
+    </div>
+
+    <div>
+        <!-- 进度条颜色
+            可以使用背景颜色实用程序类来创建各种颜色的进度条，以便通过不同颜色传达不同的含义。默认情况下，进度条为
+            蓝色（主要）
+        -->
+        <div>进度条颜色</div>
+        <br>
+        <div class="progress">
+            <div class="progress-bar bg-info" style="width: 50%;"></div>
+        </div>
+        <br>
+        <div class="progress">
+            <div class="progress-bar bg-success" style="width: 50%;"></div>
+        </div>
+        <br>
+        <div class="progress">
+            <div class="progress-bar bg-warning" style="width: 50%;"></div>
+        </div>
+        <br>
+        <div class="progress">
+            <div class="progress-bar bg-danger" style="width: 50%;"></div>
+        </div>
+    </div>
+
+    <div>
+        <!-- 条纹的进度条
+            要创建带条纹的进度条，只需要想progress-bar元素添加一个额外的类progress-bar-striped
+            条纹是通过进度条背景颜色上的css渐变生成的。与纯色类似，还可以使用相同的背景色实用程序类
+            创建不同颜色的带条纹的进度条
+        -->
+        <div>带条纹的进度条</div>
+        <br>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" style="width: 50%;"></div>
+        </div>
+        <br>
+        <div class="progress">
+            <div class="progress-bar bg-warning progress-bar-striped" style="width: 50%;"></div>
+        </div>
+    </div>
+
+    <div>
+        <!-- 进度条动画
+            将类progress-bar-animated添加到带有类progress-bar的元素上可以为条纹的进度条设置动画，它将通过
+            css3动画从右到左为条纹做动画
+        -->
+        <div>进度条动画</div>
+        <br>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 60%;"></div>
+        </div>
+    </div>
+
+    <div>
+        <!-- 混合色彩进度条
+            可以在一个组件中放置多个进度条来使它们并排在一起，进度条也可以堆叠
+        -->
+        <br>
+        <div class="progress">
+            <div class="progress-bar bg-success" style="width: 40%;">40%</div>
+            <div class="progress-bar bg-warning" style="width: 15%;">15%</div>
+            <div class="progress-bar bg-danger" style="width: 25%;">25%</div>
+        </div>
+    </div>
+    <!-- bootstrap的js文件 -->
+    <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

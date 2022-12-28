@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap的css文件 -->
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <span>预置按钮</span>
+    <div>
+        <!-- bootstrap按钮样式
+        bootstrap内置了几种预定义的按钮样式，每种样式都有自己的语义目的，并添加了一些额外的按钮
+        任何带有btn类的元素都会继承圆角按钮的默认外观
+        -->
+        <button type="button" class="btn">基本按钮</button>
+        <button type="button" class="btn btn-primary">主要按钮</button>
+        <button type="button" class="btn btn-secondary">次要按钮</button>
+        <button type="button" class="btn btn-success">成功</button>
+        <button type="button" class="btn btn-info">信息</button>
+        <button type="button" class="btn btn-warning">警告</button>
+        <button type="button" class="btn btn-danger">危险</button>
+        <button type="button" class="btn btn-dark">黑色</button>
+        <button type="button" class="btn btn-light">浅色</button>
+        <button type="button" class="btn btn-link">链接</button>
+    </div>
+    <span>非button元素使用按钮样式</span>
+    <div>
+        <!-- 按钮类型可用于<a>、<button>、<input>元素 -->
+        <a href="#" class="btn btn-success">链接按钮</a>
+        <button type="button" class="btn btn-success">按钮</button>
+        <input type="button" class="btn btn-success" value="输入按钮">
+        <input type="submit" class="btn btn-success" value="提交按钮">
+        <input type="reset" class="btn btn-success" value="重置按钮">
+    </div>
+    <span>轮廓按钮</span>
+    <div>
+        <!-- bootstrap还提供了8个轮廓按钮。鼠标移动到按钮上添加突出效果 -->
+        <button type="button" class="btn btn-outline-primary">主要</button>
+        <button type="button" class="btn btn-outline-secondary">次要</button>
+        <button type="button" class="btn btn-outline-success">成功</button>
+        <button type="button" class="btn btn-outline-info">信息</button>
+        <button type="button" class="btn btn-outline-warning">警告</button>
+        <button type="button" class="btn btn-outline-danger">危险</button>
+        <button type="button" class="btn btn-outline-dark">黑色</button>
+        <button type="button" class="btn btn-outline-light">浅色</button>
+        <button type="button" class="btn btn-outline-link">链接</button>
+    </div>
+    <span>按钮尺寸</span>
+    <div>
+        <!-- bootstrap可以设置按钮的大小，使用btn-lg类设置大按钮，使用btn-sm设置小按钮 -->
+        <button type="button" class="btn btn-primary btn-lg">大按钮</button>
+        <button type="button" class="btn btn-primary">普通按钮</button>
+        <button type="button" class="btn btn-primary btn-sm">小按钮</button>
+    </div>
+    <span>块级按钮</span>
+    <!-- 如需创建跨越父元素整个宽度的块级按钮，通过添加.btn-block类可以设置块级按钮，
+        d-grid类设置在父级元素中
+        btn-lg类会让按钮看起来比较大
+        btn-sm类会让按钮看起来比较小
+        btn-block类会创建块级的按钮，会横跨父元素的全部宽度
+    -->
+    <div class="d-grid">
+        <button type="button" class="btn btn-primary btn-block">100%宽度的按钮</button>
+    </div>
+    <span>活动/禁用按钮</span>
+    <div>
+        <!-- 按钮可设置为激活或者禁止点击的状态，
+            active类可以设置按钮是可用的，disabled属性可以设置按钮是不可点击的。
+            注意：<a>元素不支持disabled属性，你可以通过添加disabled类来禁止链接的点击
+            disable类只是会使链接在视觉上看起来像已禁用，但是除非从中删除href属性，
+            否则该链接将保持可点击的状态
+        -->
+        <button type="button" class="btn btn-primary active">点击后的按钮</button>
+        <button type="button" class="btn btn-primary disabled">禁止点击的按钮</button>
+        <a href="#" class="btn btn-primary disabled">禁止点击的链接</a>
+    </div>
+    <span>按钮组</span>
+    <div>
+        <!-- 要创建一个按钮组，只需将一系列具有btn类的按钮包装在<div>元素中，然后在其上应用btn-group类。
+            还可以在单个按钮上应用active类以指示活动状态
+            基本按钮组
+        -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-success active">按钮一</button>
+            <button type="button" class="btn btn-warning">按钮二</button>
+            <button type="button" class="btn btn-danger">按钮三</button>
+        </div>
+        <!-- 按钮组的大小
+            以使用btn-group-lg|sm|xs类来设置按钮组的大小，可应用到整个按钮组的大小调整，而不需要对每个按钮
+            进行大小调整
+        -->
+        <div class="btn-group btn-group-lg">
+            <button type="button" class="btn btn-success active">按钮一</button>
+            <button type="button" class="btn btn-warning">按钮二</button>
+            <button type="button" class="btn btn-danger">按钮三</button>
+        </div>
+        <!-- 垂直按钮组
+            可以使按钮组显示为垂直堆叠而不是水平堆叠。为此，只需要将类btn-group替换为类btn-group-vertical
+        -->
+        <div class="btn-group-vertical ">
+            <button type="button" class="btn btn-success active">按钮一</button>
+            <button type="button" class="btn btn-warning">按钮二</button>
+            <button type="button" class="btn btn-danger">按钮三</button>
+        </div>
+    </div>
+    <!-- bootstrap的js文件 -->
+    <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

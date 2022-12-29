@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap的css文件 -->
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Flex
+        弹性盒子是css3的一种新的布局模式，更适合响应式布局的设计
+        创建一个弹性盒子
+    -->
+    <div class="container">
+        <!-- 使用d-flex类创建flexbox容器并将直接子项转换为flex项 -->
+        <div class="d-flex p-3 bg-info text-white">
+            <div class="p-2 bg-secondary">弹性项目1</div>
+            <div class="p-2 bg-secondary">弹性项目2</div>
+            <div class="p-2 bg-secondary">弹性项目3</div>
+        </div>
+
+        <!-- 使用d-inline-flex类创建行内flexbox容器 -->
+        <div class="d-inline-flex p-3 bg-info text-white">
+            <div class="p-2 bg-secondary">弹性项目1</div>
+            <div class="p-2 bg-secondary">弹性项目2</div>
+            <div class="p-2 bg-secondary">弹性项目3</div>
+        </div>
+        <!-- 区别：
+            d-flex创建的容器大小是父类容器的大小
+            d-inline-flex创建的容器大小是子项大小之和
+        -->
+
+        <div>主轴方向</div>
+        <!-- 水平方向
+            flex-row可以设置弹性子元素水平显示，这是默认的
+            使用flex-row-reverse类用于设置右对齐显示，即与flex-row方向相反。
+        -->
+        <div class="d-flex p-3 bg-info text-white flex-row">
+            <div class="p-2 bg-secondary">弹性项目1</div>
+            <div class="p-2 bg-secondary">弹性项目2</div>
+            <div class="p-2 bg-secondary">弹性项目3</div>
+        </div>
+        <div class="d-flex p-3 bg-info text-white flex-row-reverse">
+            <div class="p-2 bg-secondary">弹性项目1</div>
+            <div class="p-2 bg-secondary">弹性项目2</div>
+            <div class="p-2 bg-secondary">弹性项目3</div>
+        </div>
+        <!-- 垂直方向
+            使用flex-column垂直显示flex项目（彼此重叠），或使用flex-column-reverse反转垂直方向
+        -->
+        <div class="d-flex p-3 bg-info text-white flex-column">
+            <div class="p-2 bg-secondary">弹性项目1</div>
+            <div class="p-2 bg-secondary">弹性项目2</div>
+            <div class="p-2 bg-secondary">弹性项目3</div>
+        </div>
+        <div class="d-flex p-3 bg-info text-white flex-column-reverse">
+            <div class="p-2 bg-secondary">弹性项目1</div>
+            <div class="p-2 bg-secondary">弹性项目2</div>
+            <div class="p-2 bg-secondary">弹性项目3</div>
+        </div>
+    </div>
+    <!-- bootstrap的js文件 -->
+    <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>      
+</body>
+</html>

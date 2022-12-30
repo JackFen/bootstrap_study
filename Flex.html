@@ -60,6 +60,116 @@
             <div class="p-2 bg-secondary">弹性项目2</div>
             <div class="p-2 bg-secondary">弹性项目3</div>
         </div>
+
+        <!-- 换行
+            默认情况下，项目都排在一条线（又称轴线）上，flex-wrap属性定义，如果一条轴线排不下，如何换行。
+            flex-nowrap(默认) 不换行
+            flex-wrap 换行，第一行在上方
+            flex-wrap-reverse 换行，第一行在下方
+        -->
+        <div class="d-flex mt-3 bg-primary flex-wrap">
+            <div class="bg-danger" style="width: 200px;">弹性项目1</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目2</div>
+            <div class="bg-info" style="width: 200px;">弹性项目3</div>
+            <div class="bg-danger" style="width: 200px;">弹性项目4</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目5</div>
+            <div class="bg-info" style="width: 200px;">弹性项目6</div>
+            <div class="bg-danger" style="width: 200px;">弹性项目7</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目8</div>
+            <div class="bg-info" style="width: 200px;">弹性项目9</div>
+        </div>
+        <div class="d-flex mt-3 bg-primary flex-wrap-reverse">
+            <div class="bg-danger" style="width: 200px;">弹性项目1</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目2</div>
+            <div class="bg-info" style="width: 200px;">弹性项目3</div>
+            <div class="bg-danger" style="width: 200px;">弹性项目4</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目5</div>
+            <div class="bg-info" style="width: 200px;">弹性项目6</div>
+            <div class="bg-danger" style="width: 200px;">弹性项目7</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目8</div>
+            <div class="bg-info" style="width: 200px;">弹性项目9</div>
+        </div>
+
+        <!-- 对齐
+            使用justify-content-*类可以改变弹性项目的对齐方式。*号的值为
+            start(默认)左对齐
+            end 右对齐
+            center 居中对齐
+            between 两端对齐，项目之间的间隔相等
+            around 每个项目两侧的间隔相等
+        -->
+        <div class="d-flex mt-3 justify-content-between">
+            <div class="bg-danger" style="width: 200px;">弹性项目1</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目2</div>
+            <div class="bg-info" style="width: 200px;">弹性项目3</div>
+            <div class="bg-danger" style="width: 200px;">弹性项目4</div>
+        </div>
+        <div class="d-flex mt-3 justify-content-around">
+            <div class="bg-danger" style="width: 200px;">弹性项目1</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目2</div>
+            <div class="bg-info" style="width: 200px;">弹性项目3</div>
+            <div class="bg-danger" style="width: 200px;">弹性项目4</div>
+        </div>
+
+        <!-- 使用align-items-*类控制单行弹性项目的垂直对齐方式，*号允许的值有
+            start
+            end
+            center
+            baseline
+            stretch(默认)如果项目未设置高度，将占满整个窗口的高度
+        -->
+        <div class="d-flex mt-3 bg-primary align-items-baseline justify-content-center" style="height: 300px; width: 500px;">
+            <h1 class="bg-danger" style="width: 200px;">弹性项目1</h1>
+            <h3 class="bg-warning" style="width: 200px;">弹性项目2</h3>
+            <h5 class="bg-info" style="width: 200px;">弹性项目3</h5>
+        </div>
+
+        <!-- 使用align-content-*类控制多行弹性项目的垂直对齐方式，*号允许的值有
+            start
+            end
+            center
+            between
+            around
+            stretch(默认)如果项目未设置高度，将占满整个窗口的高度
+         -->
+         <div class="d-flex mt-3 bg-primary flex-wrap align-content-between" style="height: 500px; width: 700px;">
+            <div class="bg-danger" style="width: 200px;">弹性项目1</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目2</div>
+            <div class="bg-info" style="width: 200px;">弹性项目3</div>
+            <div class="bg-danger" style="width: 200px;">弹性项目4</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目5</div>
+            <div class="bg-info" style="width: 200px;">弹性项目6</div>
+            <div class="bg-danger" style="width: 200px;">弹性项目7</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目8</div>
+            <div class="bg-info" style="width: 200px;">弹性项目9</div>
+        </div>
+        <div class="d-flex mt-3 bg-primary flex-wrap align-content-around justify-content-between" style="height: 500px; width: 700px;">
+            <div class="bg-danger" style="width: 200px;">弹性项目1</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目2</div>
+            <div class="bg-info" style="width: 200px;">弹性项目3</div>
+            <div class="bg-danger" style="width: 200px;">弹性项目4</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目5</div>
+            <div class="bg-info" style="width: 200px;">弹性项目6</div>
+            <div class="bg-danger" style="width: 200px;">弹性项目7</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目8</div>
+            <div class="bg-info" style="width: 200px;">弹性项目9</div>
+        </div>
+
+        <!-- 顺序
+            使用order类可以更改特定flex项的视觉顺序，其中最低数组具有最高优先级（order-1显示在order-2之前，以此类推）默认为0
+
+            等宽
+            在flex项目上使用flex-fill可强制它们等宽
+
+            伸展
+            在flex项目上使用flex-grow-1可占用多余的空间
+        -->
+        <br>
+        <div class="d-sm-flex bg-primary">
+            <div class="bg-danger" style="width: 200px;">弹性项目1</div>
+            <div class="bg-warning" style="width: 200px;">弹性项目2</div>
+            <div class="bg-info flex-grow-1" style="width: 200px;">弹性项目3</div>
+        </div>
     </div>
     <!-- bootstrap的js文件 -->
     <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>      

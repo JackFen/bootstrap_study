@@ -170,6 +170,31 @@
             <div class="bg-warning" style="width: 200px;">弹性项目2</div>
             <div class="bg-info flex-grow-1" style="width: 200px;">弹性项目3</div>
         </div>
+
+        <!-- 指定子元素对齐
+            要设置指定子元素对齐可以使用align-self-*类来控制，align-self-*属性允许单个项目有与其他项目不一样的对齐方式
+            start
+            end
+            center
+            baseline
+            stretch(默认值)
+        -->
+        <br>
+        <div class="d-sm-flex bg-primary" style="width: 400px; height: 400px;">
+            <div class="bg-danger align-self-end">弹性项目1</div>
+            <div class="bg-warning align-self-center">弹性项目2</div>
+            <div class="bg-info">弹性项目3</div>
+        </div>
+
+        <!-- 响应式flex类
+            可以根据不同的设备设置flex类，从儿童实现页面响应式布局，*号可以的值有：sm、md、lg或xl,
+            对应小型设备、中型设备、大型设备、超大型设备
+            类                      实例
+            d-*-flex           根据不同的屏幕设备创建弹性盒子容器
+            d-*_inline-flex    根据不同的屏幕设备创建行内弹性盒子容器
+            即在之前的类中对位置加上*
+        -->
+        
     </div>
     <!-- bootstrap的js文件 -->
     <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>      

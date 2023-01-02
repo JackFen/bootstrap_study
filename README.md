@@ -61,5 +61,12 @@
 普通阴影、大阴影、小阴影、取消阴影效果
 
 ## Flex(弹性盒子)
+### 容器的属性
 
 创建flex、flex方向、换行、对齐、顺序、等宽、伸展、指定子元素对齐、响应式flex类
+
+### 项目的属性
+
+flex-grow、flex-shrink、flex-basis、flex、align-self
+
+未完待续

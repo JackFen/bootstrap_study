@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <style>
+        .box1{
+            display: flex;
+            width: 500px;
+            height: 150px;
+            background-color: pink;
+        }
+        .box1 div{
+            height: 100px;
+        }
+        /* flex-grow */
+        .item1{
+            width: 100px;
+            background-color: red;
+            flex-grow: 1;
+        }
+        .item2{
+            width: 100px;
+            background-color: green;
+            flex-grow: 2;
+        }
+        .item3{
+            width: 100px;
+            background-color: blue;
+            flex-grow: 3;
+        }
+        /* flex-shrink */
+        .item4{
+            width: 100px;
+            background-color: red;
+            flex-shrink: 1;
+        }
+        .item5{
+            width: 300px;
+            background-color: green;
+            flex-shrink: 3;
+        }
+        .item6{
+            width: 500px;
+            background-color: blue;
+            flex-shrink: 2;
+        }
+        /* flex-basis */
+        .item7{
+            background-color: red;
+            flex-basis: 100px;
+        }
+        .item8{
+            background-color: green;
+            flex-basis: 10rem;
+        }
+        .item9{
+            background-color: blue;
+            flex-basis: 30%;
+        }
+    </style>
+</head>
+<body>
+    <!-- flex-grow属性
+        flex-grow属性定义项目的放大比例，默认为0，即如果不存在剩余空间，也不放大。
+        基本语法格式如下：
+        .item{
+            flex-grow:<number>;/*default 0*/
+        }
+        如果所有的项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的
+        flex-grow属性为2，其他项目都为1，则前者占据的剩余空间比其他项多一倍。
+        如果<number>为小数，则其放大的比例为number/1,如果是整数，则分母为各个项目的number之和
+    -->
+    <div class="box1">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+    </div>
+    <!-- flex-shrink
+        flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。负值对该属性无效。
+        基本语法如下：
+        .item{
+            flex-shrink:<number>;/*default 1*/
+        }
+    -->
+    <div class="box1">
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+    </div>
+    <div class="box1">
+        容器长度是600
+        溢出空间的长度：100+300+500-600=300px
+        100*1+300*3+500*2=2000
+        100*1/2000=0.05
+        200*3/2000=0.45
+        500*2/2000=0.5
+        所以每个项目分别缩小：
+        300*0.05=150px
+        300*0.45=135px
+        300*0.5=150px
+        <br>
+        flex-shrink属性值之和小于1，
+        300*（0.1+0.2+0.3）=180
+        180*0.05=9px
+        180*0.45=81px
+        180*0.5=90px
+    </div>
+
+    <!-- flex-basis
+        flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。
+        浏览器根据这个属性，计算主轴是否有多余空间。它的默认值是auto，即项目的本来大小。
+        基本语法格式如下：
+        .item{
+            flex-basis:<length>|auto;/*default auto*/
+        }
+        它可以设为跟width或者height属性一样的值（比如350px）,则项目将占据固定空间。
+    -->
+    <div class="box1">
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+    </div>
+
+    <!-- flex
+        flex属性是flex-grow、flex-shrink和flex-basis的简写、默认值为 0 1 auto.后面两个属性可选。
+        基本语法格式如下：
+        .item{
+            flex: none|[<flex-grow> <flex-shrink> <flex-basis>]
+        }
+        该属性有两个快捷值：auto(1 1 auto)和none(0 0 auto).
+        建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值
+    -->
+
+    <!-- align-self
+        align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，
+        如果没有父元素，则等同于stretch。
+        基本语法格式如下：
+        .item{
+            align-self:auto|flex-start|flex-end|center|baseline|stretch;
+        }
+        align-self属性允许item有自己独特的在交叉轴上的对齐方式、该属性可能取6个值，除了auto,其他都与align-items属性一致。
+        auto:和父元素align-self的值一致
+        flex-start:顶端对齐
+        flex-end:底部对齐
+        center:竖直方向上居中对齐
+        baseline:item第一行文字的底部对齐
+        stretch:当item未设置高度时，item将和容器等高对齐
+    -->
+     <!-- bootstrap的js文件 -->
+     <script type="text/javascript" src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>   
+</body>
+</html>
